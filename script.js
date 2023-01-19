@@ -1,4 +1,3 @@
-let form = document.getElementById("form");
 let fname = document.getElementById("fname");
 let lname = document.getElementById("lname");
 let email = document.getElementById("email");
@@ -22,13 +21,8 @@ const error = {
     phone: true,
     bio: true
 }
-function onLoad() {
-    button.removeAttribute("class");
-    button.removeAttribute("onclick");
-    button.style.cursor = "not-allowed";
-}
 function inputChange() {
-    console.log(fname.value);
+    // console.log(fname.value);
     if (fname.value == "") {
         error.fname = true;
         error1.innerText = "Please enter your First Name";
@@ -163,6 +157,7 @@ function inputChange() {
 }
 function submit() {
     // console.log("hello")
+
     const DataToSend = {
         fname: fname.value,
         lname: lname.value,
@@ -172,12 +167,6 @@ function submit() {
         bio: bio.value
     }
     console.log(DataToSend);
-    form.innerHTML = `<h1>${fname.value.toUpperCase()+" "+lname.value.toUpperCase()+" "}Your form is submitted</h1>`
-    fname.value = "";
-    lname.value = "";
-    email.value = "";
-    password.value = "";
-    telephone.value = "";
-    bio.value = "";
+    window.alert(fname.value.toUpperCase() + " " + lname.value.toUpperCase() + ", " + "Your form is submitted");
+    window.location.reload()
 }
-settimeout(onLoad(),10000);

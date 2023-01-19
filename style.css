@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
 }
-body{
+
+body {
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
 }
-.form{
+
+.form {
     margin-top: .7rem;
     margin-bottom: .7rem;
     width: 34rem;
@@ -30,16 +33,18 @@ body{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 15px;
     background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 
 }
-h1{
+
+h1 {
     /* border: 1px solid; */
     height: 6.7%;
     font-size: 1.8rem;
 }
-div{
+
+div {
     /* border: 1px solid ; */
     margin-top: 1rem;
     display: flex;
@@ -50,7 +55,8 @@ div{
     /* height: 4.5rem; */
 }
 
-button{
+button {
+    cursor: not-allowed;
     width: 5.5rem;
     height: 2.5rem;
     font-size: large;
@@ -61,8 +67,8 @@ button{
     color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
 .submit:hover {
-    cursor: pointer;
     background-color: cornflowerblue;
     color: black;
     transform: scale(1.1);
@@ -72,11 +78,13 @@ button{
     transform: translateY(1px);
     box-shadow: 0 1px #666;
 }
-label{
+
+label {
     font-size: 17px;
     font-weight: bolder;
 }
-input{
+
+input {
     outline: none;
     margin-top: 3.39px;
     margin-bottom: 1px;
@@ -87,20 +95,28 @@ input{
     box-shadow: inset 3px 3px 8px #cbced1,
         inset -2px -2px 8px #cbced1;
 }
+
 input:hover {
     transform: scale(1.025);
 }
+
 /* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 } */
-::placeholder{
+::placeholder {
     font-size: 15px;
     font-weight: bolder;
     color: rgba(128, 128, 128, 0.603);
 }
-#error1,#error2,#error3,#error4,#error5,#error6{
+
+#error1,
+#error2,
+#error3,
+#error4,
+#error5,
+#error6 {
     font-size: .8rem;
     font-weight: 900;
     color: darkred;
@@ -109,14 +125,57 @@ input::-webkit-inner-spin-button {
     /* border: 1px solid; */
     width: 100%;
 }
+
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form {
+        width: 350px;
+        height: 500px;
+
+    }
+
+    div {
+        width: 300px;
+        height: 14%;
+        margin-top: 0;
+        margin-bottom: 2px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    label {
+        font-size: small;
+    }
+
+    #error1,
+    #error2,
+    #error3,
+    #error4,
+    #error5,
+    #error6 {
+        font-size: 10px;
+    }
+
+    button {
+        margin-top: 5px;
+        height: 30px;
+        font-size: .9rem;
+        /* font-weight: 700; */
+    }
 }
