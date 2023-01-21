@@ -32,7 +32,7 @@ function inputChange() {
         error.fname = false;
         error1.innerText = "";
         input[0].style.border = "";
-        if (/^[a-zA-Z]*$/.test(fname.value) != true) {
+        if (/^[a-zA-Z\s]*$/.test(fname.value) != true) {
             // console.log("hello");
             error.fname = true;
             error1.innerText = "First Name must be in alphabets";
@@ -60,7 +60,7 @@ function inputChange() {
         error.lname = false;
         error2.innerText = "";
         input[1].style.border = "";
-        if (/^[a-zA-Z]*$/.test(lname.value) != true) {
+        if (/^[a-zA-Z\s]*$/.test(lname.value) != true) {
             // console.log("hello");
             error.lname = true;
             error2.innerText = "Last Name must be in alphabets";
@@ -136,7 +136,7 @@ function inputChange() {
         error.bio = false;
         error6.innerText = "";
         input[5].style.border = "";
-        if (/^(?=.*[a-z])[a-z_-\s]{8,50}$/.test(bio.value) != true) {
+        if (/^(?=.*[a-z])[a-z_.-\s]{8,50}$/.test(bio.value) != true) {
             // console.log("hello");
             error.bio = true;
             error6.innerText = "Bio must contain only Lowercase letters, underscores, hyphens and be 8-50 one characters";
@@ -170,3 +170,4 @@ function submit() {
     window.alert(fname.value.toUpperCase() + " " + lname.value.toUpperCase() + ", " + "Your form is submitted");
     window.location.reload()
 }
+
